@@ -6,7 +6,7 @@
 /*   By: gd-auria <gianmarco.dauria@libero.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 17:10:45 by gd-auria          #+#    #+#             */
-/*   Updated: 2025/06/07 17:19:56 by gd-auria         ###   ########.fr       */
+/*   Updated: 2025/06/25 16:41:39 by gd-auria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
     try
     {
-        Span sp = Span(5);
+        Span sp = Span(5); //copy initialization (copy elision: avoiding useless copies)
         
         sp.addNumber(6);
         sp.addNumber(3);
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
     return 0;
 }

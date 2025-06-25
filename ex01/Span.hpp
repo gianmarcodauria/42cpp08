@@ -6,7 +6,7 @@
 /*   By: gd-auria <gianmarco.dauria@libero.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 16:46:07 by gd-auria          #+#    #+#             */
-/*   Updated: 2025/06/07 16:54:07 by gd-auria         ###   ########.fr       */
+/*   Updated: 2025/06/25 16:03:32 by gd-auria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 
 class Span
 {
+    private:
+        std::vector<int> _num;
+        unsigned int _maximumSize;
+
     public:
         Span(unsigned int n);
         ~Span();
@@ -35,9 +39,6 @@ class Span
                 throw std::runtime_error("Over maximum capacity");
             _num.insert(_num.end(), start, end);
         }
-    private:
-        std::vector<int> _num;
-        unsigned int _maximumSize;
 };
 
 #endif

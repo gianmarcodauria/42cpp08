@@ -6,7 +6,7 @@
 /*   By: gd-auria <gianmarco.dauria@libero.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 17:07:48 by gd-auria          #+#    #+#             */
-/*   Updated: 2025/06/07 17:08:40 by gd-auria         ###   ########.fr       */
+/*   Updated: 2025/06/25 15:53:24 by gd-auria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@ Span::Span(unsigned int N) : _maximumSize(N) {}
  
 Span::~Span() {}
  
-void Span::addNumber(int number) {
+void Span::addNumber(int number)
+{
     if (_num.size() >= _maximumSize)
         throw std::runtime_error("Span is full");
     _num.push_back(number);
 }
  
-int Span::shortestSpan() const {
+int Span::shortestSpan() const
+{
     if (_num.size() < 2)
         throw std::runtime_error("Not enough numbers to find a span");
  
@@ -38,7 +40,8 @@ int Span::shortestSpan() const {
     return minSpan;
 }
  
-int Span::longestSpan() const {
+int Span::longestSpan() const
+{
     if (_num.size() < 2)
         throw std::runtime_error("Not enough numbers to find a span");
  
